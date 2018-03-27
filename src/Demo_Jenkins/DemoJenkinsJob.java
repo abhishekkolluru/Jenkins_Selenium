@@ -19,7 +19,7 @@ public class DemoJenkinsJob {
 		driver.findElement(By.xpath("//span[contains(text(),'Products')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Auto Insurance')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Get a Free')]")).click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		driver.quit();
 	}
 }
