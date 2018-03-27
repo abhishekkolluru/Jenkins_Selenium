@@ -11,7 +11,7 @@ public class DemoJenkinsJob {
 	@Test
 	public void Jenkins() throws Exception {
 
-		System.out.println("Welcome to the jenkins");
+		System.out.println("Welcome to the jenkins and selenium integration");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Abhishek\\Downloads\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
