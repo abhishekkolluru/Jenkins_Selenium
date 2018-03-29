@@ -3,8 +3,7 @@ package Demo_Jenkins;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 
 public class DemoJenkinsJob {
 
@@ -36,7 +35,7 @@ public class DemoJenkinsJob {
 		driver.findElement(By.xpath("//span[contains(text(),'Products')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Auto Insurance')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Get a Free')]")).click();
-		System.out.println("Thank you");
+		System.out.println("Thank you...");
 		Thread.sleep(5000);
 		driver.quit();
 	}
