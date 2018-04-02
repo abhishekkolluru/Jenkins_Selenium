@@ -5,7 +5,7 @@
     <classes>
       <class name="Demo_Jenkins.DemoJenkinsJob">
         <methods>
-          <include name="firefox"/>
+          <include name="Jenkins_1"/>
         </methods>
       </class> <!-- Demo_Jenkins.DemoJenkinsJob -->
     </classes>

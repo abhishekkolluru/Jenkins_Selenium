@@ -10,7 +10,7 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>io.qameta.allure</groupId>
+    <groupId>ru.yandex.qatools.allure</groupId>
     <artifactId>Jenkins_Demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 

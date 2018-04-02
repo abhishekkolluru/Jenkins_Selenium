@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/Abhishek/Downloads/selenium-server-standalone-3.4.0 (1).jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Abhishek/Downloads/allure-testng-adaptor-1.5.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Abhishek/Downloads/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Abhishek/Downloads/TestNG/testng-6.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
