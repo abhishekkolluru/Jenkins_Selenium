@@ -17,6 +17,7 @@ public class DemoJenkinsJob2 {
 		driver.manage().window().maximize();
 		driver.get("http:www.google.com");
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("auto insurance");
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@value='Google Search']")).click();
 		Thread.sleep(6000);
 		driver.quit();
