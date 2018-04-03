@@ -1,1 +1,1 @@
-java -cp C:\Users\Abhishek\eclipse-workspace\Jenkins_Demo\bin;C:\Users\Abhishek\eclipse-workspace\Jenkins_Demo\libs\*; org.testng.TestNG testng.xml
+java -cp C:\Users\Abhishek\eclipse-workspace\Jenkins_Selenium\bin;C:\Users\Abhishek\eclipse-workspace\Jenkins_Selenium\libs\*; org.testng.TestNG testng.xml
