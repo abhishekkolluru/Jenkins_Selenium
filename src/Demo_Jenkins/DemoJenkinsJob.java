@@ -17,7 +17,7 @@ public class DemoJenkinsJob {
 		driver.get("https://www.usaa.com");
 		driver.findElement(By.xpath("//span[contains(text(),'Products')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Auto Insurance')]")).click();
-		//driver.findElement(By.xpath("//a[contains(text(),'Get a Free')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Get a Free')]")).click();
 		System.out.println("Thank you");
 		Thread.sleep(6000);
 		driver.quit();
