@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14952" started-at="2018-04-03T17:27:26Z" finished-at="2018-04-03T17:27:41Z">
+  <suite name="Suite" duration-ms="41322" started-at="2018-04-03T18:23:12Z" finished-at="2018-04-03T18:23:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14952" started-at="2018-04-03T17:27:26Z" finished-at="2018-04-03T17:27:41Z">
+    <test name="Test" duration-ms="41322" started-at="2018-04-03T18:23:12Z" finished-at="2018-04-03T18:23:53Z">
+      <class name="Demo_Jenkins.DemoJenkinsJob">
+        <test-method status="PASS" signature="Jenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@46d56d67]" name="Jenkins" duration-ms="23616" started-at="2018-04-03T18:23:29Z" finished-at="2018-04-03T18:23:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Jenkins -->
+      </class> <!-- Demo_Jenkins.DemoJenkinsJob -->
       <class name="Demo_Jenkins.DemoJenkinsJob2">
-        <test-method status="PASS" signature="testJenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1f7030a6]" name="testJenkins" duration-ms="14930" started-at="2018-04-03T17:27:26Z" finished-at="2018-04-03T17:27:41Z">
+        <test-method status="PASS" signature="testJenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@4c70fda8]" name="testJenkins" duration-ms="17676" started-at="2018-04-03T18:23:12Z" finished-at="2018-04-03T18:23:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJenkins -->
       </class> <!-- Demo_Jenkins.DemoJenkinsJob2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
