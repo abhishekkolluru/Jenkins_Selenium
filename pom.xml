@@ -60,7 +60,7 @@
                 <outputDirectory>${allure.results.directory}</outputDirectory>
                 <resources>
                     <resource>
-                        <directory>target</directory>
+                        <directory>target/allure-results</directory>
                         <filtering>true</filtering>
                     </resource>
                 </resources>
