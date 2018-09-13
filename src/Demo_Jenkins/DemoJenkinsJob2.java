@@ -9,26 +9,32 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class DemoJenkinsJob2 {
+	String filename = System.getProperty("user.dir") + "/test-output/HtmlTestResults.html";
+	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest logger;
 
 	@BeforeTest
 	public void startReport() {
-		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/STMExtentReport.html", true);
-		extent.addSystemInfo("Host Name", "Testing").addSystemInfo("Environment", "Automation Testing")
-				.addSystemInfo("User Name", "Abhishek");
-		extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
+		htmlReporter = new ExtentHtmlReporter(filename);
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		htmlReporter.config().setReportName("Automation Report");
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 	}
 
 	@Test
@@ -38,48 +44,44 @@ public class DemoJenkinsJob2 {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http:www.google.com");
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
+		driver.findElement(By.xpath("//input[@type='tex']")).sendKeys("jenkins");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@value='Google Search']")).click();
-		Thread.sleep(6000);
-		logger = extent.startTest("testJenkins");
-		Assert.assertTrue(true);
-		logger.log(LogStatus.PASS, "Test Case Passed is testJenkins");
-		driver.quit();
-	}
-	
-	@Test
-	public void testJenkins2() throws Exception {
-		System.out.println("Welcome to the jenkins");
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\Abhishek\\Downloads\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("http:www.google.com");
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@value='Google Search']")).click();
-		Thread.sleep(6000);
-		logger = extent.startTest("testJenkins2");
+		logger = extent.createTest("testJenkins");
 		Assert.assertTrue(true);
-		logger.log(LogStatus.PASS, "Test Case Passed is testJenkins2");
+		logger.log(Status.PASS, "Test Case Passed is testJenkins");
 		driver.quit();
 	}
+
+	/*
+	 * @Test public void testJenkins2() throws Exception {
+	 * System.out.println("Welcome to the jenkins");
+	 * System.setProperty("webdriver.gecko.driver",
+	 * "C:\\Users\\Abhishek\\Downloads\\geckodriver.exe"); WebDriver driver = new
+	 * FirefoxDriver(); driver.manage().window().maximize();
+	 * driver.get("http:www.google.com");
+	 * driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
+	 * Thread.sleep(2000);
+	 * driver.findElement(By.xpath("//input[@value='Google Search']")).click();
+	 * Thread.sleep(6000); logger = extent.startTest("testJenkins2");
+	 * Assert.assertTrue(true); logger.log(LogStatus.PASS,
+	 * "Test Case Passed is testJenkins2"); driver.quit(); }
+	 */
 
 	@AfterMethod
 	public void getResult(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
+			logger.log(Status.FAIL, "Test Case Failed is " + result.getName());
+			logger.log(Status.FAIL, "Test Case Failed is " + result.getThrowable());
 		} else if (result.getStatus() == ITestResult.SKIP) {
-			logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
+			logger.log(Status.SKIP, "Test Case Skipped is " + result.getName());
 		}
-		extent.endTest(logger);
 	}
 
 	@AfterTest
 	public void endReport() {
 		extent.flush();
-		extent.close();
 	}
 
 }
