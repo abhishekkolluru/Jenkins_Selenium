@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -63,7 +64,7 @@ public class DemoJenkinsJob2 {
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@value='Google Search']")).click();
-		Thread.sleep(6000);
+		Thread.sleep(1000);
 		logger = extent.createTest("testJenkins2");
 		Assert.assertTrue(true);
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins2", ExtentColor.GREEN));
