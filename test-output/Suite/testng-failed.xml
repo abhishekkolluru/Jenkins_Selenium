@@ -5,6 +5,7 @@
     <classes>
       <class name="Demo_Jenkins.DemoJenkinsJob2">
         <methods>
+          <include name="testJenkins2"/>
           <include name="startReport"/>
           <include name="endReport"/>
           <include name="getResult"/>
