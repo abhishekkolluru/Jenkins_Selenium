@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
-  <test thread-count="5" name="Test(failed)" parallel="methods">
+<suite thread-count="10" configfailurepolicy="continue" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="10" verbose="10" name="Test(failed)" parallel="tests">
     <classes>
       <class name="Demo_Jenkins.DemoJenkinsJob2">
         <methods>
