@@ -20,9 +20,9 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class DemoJenkinsJob {
+public class DemoJenkinsJob extends DemoJenkinsJob2{
 
-	String filename = System.getProperty("user.dir") + "/test-output/HtmlTestResults1.html";
+	/*String filename = System.getProperty("user.dir") + "/test-output/HtmlTestResults1.html";
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest logger;
@@ -37,7 +37,7 @@ public class DemoJenkinsJob {
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 	}
-
+*/
 	@Test
 	public void Jenkins() throws Exception {
 
@@ -138,7 +138,7 @@ public class DemoJenkinsJob {
 		 */
 	}
 
-	@AfterMethod
+	/*@AfterMethod
 	public void getResult(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			logger.log(Status.FAIL,
@@ -154,6 +154,6 @@ public class DemoJenkinsJob {
 	@AfterTest
 	public void endReport() {
 		extent.flush();
-	}
+	}*/
 
 }
