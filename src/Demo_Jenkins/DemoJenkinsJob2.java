@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -32,6 +31,7 @@ public class DemoJenkinsJob2 {
 		htmlReporter = new ExtentHtmlReporter(filename);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
+		htmlReporter.config().setDocumentTitle("Final Report");
 		htmlReporter.config().setReportName("Automation Report");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
@@ -67,7 +67,7 @@ public class DemoJenkinsJob2 {
 		Thread.sleep(1000);
 		logger = extent.createTest("testJenkins2");
 		Assert.assertTrue(true);
-		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins2", ExtentColor.GREEN));
+		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins2", ExtentColor.BLUE));
 		driver.quit();
 	}
 

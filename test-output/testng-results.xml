@@ -1,51 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="29292" started-at="2018-09-14T16:19:44Z" finished-at="2018-09-14T16:20:14Z">
+  <suite name="Suite" duration-ms="80443" started-at="2018-09-21T14:12:34Z" finished-at="2018-09-21T14:13:55Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="29292" started-at="2018-09-14T16:19:44Z" finished-at="2018-09-14T16:20:14Z">
-      <class name="Demo_Jenkins.DemoJenkinsJob2">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c]" name="startReport" is-config="true" duration-ms="173" started-at="2018-09-14T16:19:44Z" finished-at="2018-09-14T16:19:44Z">
+    <test name="Test" duration-ms="80443" started-at="2018-09-21T14:12:34Z" finished-at="2018-09-21T14:13:55Z">
+      <class name="Demo_Jenkins.DemoJenkinsJob">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="startReport" is-config="true" duration-ms="167" started-at="2018-09-21T14:12:34Z" finished-at="2018-09-21T14:12:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="testJenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c]" name="testJenkins" duration-ms="12205" started-at="2018-09-14T16:19:44Z" finished-at="2018-09-14T16:19:57Z">
+        <test-method status="PASS" signature="Jenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="Jenkins" duration-ms="28627" started-at="2018-09-21T14:12:35Z" finished-at="2018-09-21T14:13:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Jenkins -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="getResult" is-config="true" duration-ms="2" started-at="2018-09-21T14:13:03Z" finished-at="2018-09-21T14:13:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Jenkins status=SUCCESS method=DemoJenkinsJob.Jenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="Jenkins1()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="Jenkins1" duration-ms="23624" started-at="2018-09-21T14:13:03Z" finished-at="2018-09-21T14:13:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Jenkins1 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="getResult" is-config="true" duration-ms="0" started-at="2018-09-21T14:13:27Z" finished-at="2018-09-21T14:13:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Jenkins1 status=SUCCESS method=DemoJenkinsJob.Jenkins1()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="getResult" is-config="true" duration-ms="0" started-at="2018-09-21T14:13:27Z" finished-at="2018-09-21T14:13:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JenkinsEdge status=SUCCESS method=DemoJenkinsJob.JenkinsEdge()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="JenkinsEdge()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="JenkinsEdge" duration-ms="0" started-at="2018-09-21T14:13:27Z" finished-at="2018-09-21T14:13:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JenkinsEdge -->
+        <test-method status="PASS" signature="testJenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="testJenkins" duration-ms="11876" started-at="2018-09-21T14:13:27Z" finished-at="2018-09-21T14:13:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJenkins -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c]" name="getResult" is-config="true" duration-ms="1" started-at="2018-09-14T16:19:57Z" finished-at="2018-09-14T16:19:57Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="getResult" is-config="true" duration-ms="0" started-at="2018-09-21T14:13:39Z" finished-at="2018-09-21T14:13:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testJenkins status=SUCCESS method=DemoJenkinsJob2.testJenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c] output={null}]]]>
+                <![CDATA[[TestResult name=testJenkins status=SUCCESS method=DemoJenkinsJob2.testJenkins()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="testJenkins2()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c]" name="testJenkins2" duration-ms="16363" started-at="2018-09-14T16:19:57Z" finished-at="2018-09-14T16:20:13Z">
+        <test-method status="PASS" signature="testJenkins2()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="testJenkins2" duration-ms="15809" started-at="2018-09-21T14:13:39Z" finished-at="2018-09-21T14:13:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJenkins2 -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c]" name="getResult" is-config="true" duration-ms="0" started-at="2018-09-14T16:20:13Z" finished-at="2018-09-14T16:20:13Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="getResult" is-config="true" duration-ms="0" started-at="2018-09-21T14:13:55Z" finished-at="2018-09-21T14:13:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testJenkins2 status=SUCCESS method=DemoJenkinsJob2.testJenkins2()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c] output={null}]]]>
+                <![CDATA[[TestResult name=testJenkins2 status=SUCCESS method=DemoJenkinsJob2.testJenkins2()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob2@1e88b3c]" name="endReport" is-config="true" duration-ms="533" started-at="2018-09-14T16:20:13Z" finished-at="2018-09-14T16:20:14Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:Demo_Jenkins.DemoJenkinsJob@42d80b78]" name="endReport" is-config="true" duration-ms="322" started-at="2018-09-21T14:13:55Z" finished-at="2018-09-21T14:13:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- Demo_Jenkins.DemoJenkinsJob2 -->
+      </class> <!-- Demo_Jenkins.DemoJenkinsJob -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

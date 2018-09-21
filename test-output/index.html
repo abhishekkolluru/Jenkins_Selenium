@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob2" hash-for-method="testJenkins">testJenkins</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob" hash-for-method="Jenkins">Jenkins</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob2" hash-for-method="testJenkins2">testJenkins2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob" hash-for-method="Jenkins1">Jenkins1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob" hash-for-method="JenkinsEdge">JenkinsEdge</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob" hash-for-method="testJenkins">testJenkins</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo_Jenkins.DemoJenkinsJob" hash-for-method="testJenkins2">testJenkins2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,9 +140,30 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Demo_Jenkins.DemoJenkinsJob2</span>
+              <span class="class-name">Demo_Jenkins.DemoJenkinsJob</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Jenkins">
+                  </a> <!-- Jenkins -->
+                  <span class="method-name">Jenkins</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Jenkins1">
+                  </a> <!-- Jenkins1 -->
+                  <span class="method-name">Jenkins1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="JenkinsEdge">
+                  </a> <!-- JenkinsEdge -->
+                  <span class="method-name">JenkinsEdge</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testJenkins">
@@ -153,10 +189,10 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;10&quot; configfailurepolicy=&quot;continue&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;10&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;10&quot; name=&quot;Test&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite thread-count=&quot;10&quot; configfailurepolicy=&quot;continue&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;10&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;10&quot; verbose=&quot;10&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Demo_Jenkins.DemoJenkinsJob2&quot;/&gt;
+      &lt;class name=&quot;Demo_Jenkins.DemoJenkinsJob&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -196,20 +232,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testJenkins2')
-data.setCell(0, 2, 'Demo_Jenkins.DemoJenkinsJob2')
-data.setCell(0, 3, 16363);
+data.setCell(0, 1, 'Jenkins')
+data.setCell(0, 2, 'Demo_Jenkins.DemoJenkinsJob')
+data.setCell(0, 3, 28627);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testJenkins')
-data.setCell(1, 2, 'Demo_Jenkins.DemoJenkinsJob2')
-data.setCell(1, 3, 12205);
+data.setCell(1, 1, 'Jenkins1')
+data.setCell(1, 2, 'Demo_Jenkins.DemoJenkinsJob')
+data.setCell(1, 3, 23624);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testJenkins2')
+data.setCell(2, 2, 'Demo_Jenkins.DemoJenkinsJob')
+data.setCell(2, 3, 15809);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testJenkins')
+data.setCell(3, 2, 'Demo_Jenkins.DemoJenkinsJob')
+data.setCell(3, 3, 11876);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'JenkinsEdge')
+data.setCell(4, 2, 'Demo_Jenkins.DemoJenkinsJob')
+data.setCell(4, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -235,30 +283,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Demo_Jenkins.DemoJenkinsJob2</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Demo_Jenkins.DemoJenkinsJob</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <span class="method-name">Jenkins</span>
+                <span class="method-start">179 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=Jenkins status=SUCCESS method=DemoJenkinsJob.Jenkins()[pri:0, instance:Demo_Jenkins...)</span>
+                <span class="method-start">28806 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">Jenkins1</span>
+                <span class="method-start">28808 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=Jenkins1 status=SUCCESS method=DemoJenkinsJob.Jenkins1()[pri:0, instance:Demo_Jenki...)</span>
+                <span class="method-start">52432 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">JenkinsEdge</span>
+                <span class="method-start">52433 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=JenkinsEdge status=SUCCESS method=DemoJenkinsJob.JenkinsEdge()[pri:0, instance:Demo...)</span>
+                <span class="method-start">52433 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
                 <span class="method-name">testJenkins</span>
-                <span class="method-start">186 ms</span>
+                <span class="method-start">52433 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getResult([TestResult name=testJenkins status=SUCCESS method=DemoJenkinsJob2.testJenkins()[pri:0, instance:Dem...)</span>
-                <span class="method-start">12392 ms</span>
+                <span class="method-start">64309 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testJenkins2</span>
-                <span class="method-start">12394 ms</span>
+                <span class="method-start">64310 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getResult([TestResult name=testJenkins2 status=SUCCESS method=DemoJenkinsJob2.testJenkins2()[pri:0, instance:D...)</span>
-                <span class="method-start">28757 ms</span>
+                <span class="method-start">80119 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">28758 ms</span>
+                <span class="method-start">80120 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
