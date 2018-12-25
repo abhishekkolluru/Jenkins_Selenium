@@ -2,6 +2,7 @@ package Demo_Jenkins;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class SeleniumJavaScriptExecutor {
+	Logger log = Logger.getLogger(SeleniumJavaScriptExecutor.class);
 
 	@Test
 	public void javaScriptExecutor() {
@@ -28,10 +30,12 @@ public class SeleniumJavaScriptExecutor {
 				.findElement(By.xpath("//input[@type='submit' and @class='btn btn-small']"));
 		JavascriptExecutor js = ((JavascriptExecutor) chromedriver);
 		js.executeScript("arguments[0].click()", loginButton);
-		
+
 		chromedriver.switchTo().frame("mainpanel");
 		chromedriver.findElement(By.xpath("//a[contains(text(),'Logout')]")).click();
-		
+
+		log.info("The End");
+
 		chromedriver.quit();
 
 	}
