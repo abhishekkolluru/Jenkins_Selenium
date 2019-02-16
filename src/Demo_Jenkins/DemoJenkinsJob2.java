@@ -4,9 +4,6 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -46,7 +43,6 @@ public class DemoJenkinsJob2 {
 	public void testJenkins() throws Exception {
 		System.out.println("Welcome to the jenkins");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Abhishek\\Downloads\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		System.out.println("running in docker container chrome");
 		cap.setBrowserName("chrome");
@@ -62,29 +58,6 @@ public class DemoJenkinsJob2 {
 		logger = extent.createTest("testJenkins");
 		Assert.assertTrue(true);
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins", ExtentColor.GREEN));
-		driver.quit();
-	}
-
-	@Test
-	public void testJenkins2() throws Exception {
-		System.out.println("Welcome to the jenkins");
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Abhishek\\Downloads\\geckodriver.exe");
-		//WebDriver driver = new FirefoxDriver();
-		DesiredCapabilities cap = DesiredCapabilities.firefox();
-		System.out.println("running in docker container firefox");
-		cap.setBrowserName("firefox");
-		cap.setCapability("version", "");
-		cap.setPlatform(Platform.LINUX);
-		RemoteWebDriver driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), cap);
-		driver.manage().window().maximize();
-		driver.get("http:www.google.com");
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@value='Google Search']")).click();
-		Thread.sleep(1000);
-		logger = extent.createTest("testJenkins2");
-		Assert.assertTrue(true);
-		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins2", ExtentColor.BLUE));
 		driver.quit();
 	}
 

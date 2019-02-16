@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="10" configfailurepolicy="continue" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite]">
-  <test thread-count="10" verbose="10" name="Test(failed)">
+<suite thread-count="10" configfailurepolicy="continue" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite]" parallel="methods">
+  <test thread-count="10" verbose="10" name="Test(failed)" parallel="methods">
     <classes>
-      <class name="Demo_Jenkins.DemoJenkinsJob">
+      <class name="Demo_Jenkins.Selenium_Docker">
         <methods>
-          <include name="endReport"/>
-          <include name="startReport"/>
-          <include name="getResult"/>
-          <include name="Jenkins"/>
+          <include name="gridFirefox"/>
+          <include name="gridChrome"/>
         </methods>
-      </class> <!-- Demo_Jenkins.DemoJenkinsJob -->
+      </class> <!-- Demo_Jenkins.Selenium_Docker -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

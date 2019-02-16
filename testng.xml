@@ -5,7 +5,7 @@
 
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="Demo_Jenkins.DemoJenkinsJob2" />
+			<class name="Demo_Jenkins.Selenium_Docker" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

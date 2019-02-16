@@ -3,7 +3,6 @@ package Demo_Jenkins;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -20,9 +19,9 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class DemoJenkinsJob extends DemoJenkinsJob2{
+public class DemoJenkinsJob {
 
-	/*String filename = System.getProperty("user.dir") + "/test-output/HtmlTestResults1.html";
+	String filename = System.getProperty("user.dir") + "/test-output/HtmlTestResults1.html";
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest logger;
@@ -37,39 +36,7 @@ public class DemoJenkinsJob extends DemoJenkinsJob2{
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 	}
-*/
-	@Test
-	public void Jenkins() throws Exception {
 
-		System.out.println("Hello world");
-		System.out.println("Welcome to the jenkins and selenium integration from github repository");
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Abhishek\\Downloads\\geckodriver.exe");
-		WebDriver firefoxdriver = new FirefoxDriver();
-		firefoxdriver.manage().window().maximize();
-		firefoxdriver.manage().window().maximize();
-		firefoxdriver.get("https://www.usaa.com");
-		firefoxdriver.findElement(By.xpath("//span[contains(text(),'Products')]")).click();
-		firefoxdriver.findElement(By.xpath("//a[contains(text(),'Auto Insurance')]")).click();
-		firefoxdriver.findElement(By.xpath("//a[contains(text(),'Get a Free')]")).click();
-		System.out.println("Thank you");
-		Thread.sleep(6000);
-		logger = extent.createTest("Jenkins");
-		Assert.assertTrue(true);
-		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins2", ExtentColor.BLUE));
-		firefoxdriver.quit();
-
-		/*
-		 * System.out.println("Welcome to the jenkins");
-		 * System.setProperty("webdriver.gecko.driver",
-		 * "C:\\Users\\Abhishek\\Downloads\\geckodriver.exe"); WebDriver driver = new
-		 * FirefoxDriver(); driver.manage().window().maximize();
-		 * driver.get("http:www.google.com");
-		 * driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
-		 * Thread.sleep(2000);
-		 * driver.findElement(By.xpath("//input[@value='Google Search']")).click();
-		 * Thread.sleep(6000); driver.quit();
-		 */
-	}
 
 	@Test
 	public void Jenkins1() throws Exception {
@@ -80,30 +47,20 @@ public class DemoJenkinsJob extends DemoJenkinsJob2{
 		WebDriver chromedriver = new ChromeDriver();
 		chromedriver.manage().window().maximize();
 		chromedriver.get("https://www.usaa.com");
-		chromedriver.findElement(By.xpath("//span[contains(text(),'Products')]")).click();
-		chromedriver.findElement(By.xpath("//a[contains(text(),'Auto Insurance')]")).click();
-		chromedriver.findElement(By.xpath("//a[contains(text(),'Get a Free')]")).click();
+		Thread.sleep(2000);
+		chromedriver.findElement(By.xpath("//nav/ul/li/a[contains(text(), 'Products')]")).click();
+		chromedriver.findElement(By.xpath("//li/a[contains(text(),'Auto Insurance')]")).click();
+		chromedriver.findElement(By.xpath("//a[@class='cta-major ghost uppercase']")).click();
 		System.out.println("Thank you");
-		Thread.sleep(6000);
 		logger = extent.createTest("Jenkins1");
 		Assert.assertTrue(true);
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins2", ExtentColor.BLUE));
 		chromedriver.quit();
 
-		/*
-		 * System.out.println("Welcome to the jenkins");
-		 * System.setProperty("webdriver.chrome.driver",
-		 * "C:\\Users\\Abhishek\\Downloads\\chromedriver.exe"); WebDriver driver = new
-		 * ChromeDriver(); driver.manage().window().maximize();
-		 * driver.get("http:www.google.com");
-		 * driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
-		 * Thread.sleep(2000);
-		 * driver.findElement(By.xpath("//input[@value='Google Search']")).click();
-		 * Thread.sleep(6000); driver.quit();
-		 */
+		
 	}
 
-	@Test
+	/*@Test
 	public void JenkinsEdge() throws Exception {
 
 		/*
@@ -135,10 +92,10 @@ public class DemoJenkinsJob extends DemoJenkinsJob2{
 		 * Thread.sleep(2000);
 		 * driver.findElement(By.xpath("//input[@value='Google Search']")).click();
 		 * Thread.sleep(6000); driver.quit();
-		 */
-	}
+		 *
+	}*/
 
-	/*@AfterMethod
+	@AfterMethod
 	public void getResult(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			logger.log(Status.FAIL,
@@ -154,6 +111,6 @@ public class DemoJenkinsJob extends DemoJenkinsJob2{
 	@AfterTest
 	public void endReport() {
 		extent.flush();
-	}*/
+	}
 
 }
