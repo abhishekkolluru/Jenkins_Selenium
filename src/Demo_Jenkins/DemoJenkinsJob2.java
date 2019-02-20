@@ -44,20 +44,31 @@ public class DemoJenkinsJob2 {
 		System.out.println("Welcome to the jenkins");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Abhishek\\Downloads\\chromedriver.exe");
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
-		System.out.println("running in docker container chrome");
+		System.out.println("Started running in docker container");
 		cap.setBrowserName("chrome");
 		cap.setCapability("version", "");
 		cap.setPlatform(Platform.LINUX);
 		RemoteWebDriver driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), cap);
 		driver.manage().window().maximize();
 		driver.get("http:www.google.com");
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenkins");
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("usaa");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@value='Google Search']")).click();
 		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a/h3[contains(text(),'USAA: Insurance, Banking, Investments & Retirement')]"))
+				.click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//nav/ul/li/a[contains(text(), 'Products')]")).click();
+		driver.findElement(By.xpath("//li/a[contains(text(),'Auto Insurance')]")).click();
+		driver.findElement(By.xpath("//a[@class='cta-major ghost uppercase']")).click();
+		Thread.sleep(2000);
+		String lastPageTitle = driver.getTitle();
+		System.out.println(lastPageTitle);
+		System.out.println("End");
 		logger = extent.createTest("testJenkins");
 		Assert.assertTrue(true);
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testJenkins", ExtentColor.GREEN));
+		System.out.println("Completed running in docker container");
 		driver.quit();
 	}
 
@@ -81,5 +92,4 @@ public class DemoJenkinsJob2 {
 	public void endReport() {
 		extent.flush();
 	}
-
 }
